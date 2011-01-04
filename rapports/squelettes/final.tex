@@ -1,0 +1,69 @@
+% Document Class : article, letter, report
+\documentclass[twoside]{article}
+
+% To include pictures
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{placeins}
+
+% Encoding settings
+\usepackage[utf8]{inputenc}
+
+% Language settings:
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+
+% Hyperrefferences  
+\usepackage{hyperref}
+
+% some infos
+\title{Squelettes}                               %%%%%%  A MODIFIER !!!!  %%%%%%
+\author{Groupe H4312}
+
+% Page layout settings
+\usepackage{geometry}
+\geometry{
+	a4paper,  % 21 x 29,7 cm
+	body={160mm,240mm},
+	left=30mm, 
+	top=25mm,
+	headheight=7mm, 
+	headsep=4mm,
+	marginparsep=4mm,
+	marginparwidth=27mm
+}
+
+% Spacing:
+\usepackage{setspace}
+
+% Headers and footers:
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+          \fancyhf{}
+          \fancyfoot[LE,RO]{\thepage}
+          % Rulers width
+          \renewcommand{\footrulewidth}{.3pt}
+          \renewcommand{\headrulewidth}{.3pt}
+\fancyhead[RO,RE]{Groupe H4312}
+\fancyfoot[LO,RE]{Squelettes}                    %%%%%%  A MODIFIER !!!!  %%%%%%
+
+
+% Begining of the document
+\begin{document}
+
+% Front Page 
+
+% Title:
+\maketitle
+\thispagestyle{empty} % Do not display header and footer
+\vfill\pagebreak % Go to the next page
+\tableofcontents % Display the table of contents
+\vfill\pagebreak % Go to the next page
+
+%%%%%%%%%%  Including all the files  %%%%%%%%%%
+\include{contenu.tex}
+
+
+% The end
+\end{document}
+
