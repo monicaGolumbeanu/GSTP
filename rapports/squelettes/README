@@ -7,6 +7,4 @@ Dans "contenu.tex" vous pourrez mettre votre contenu, séparé en plusieurs
 fichiers si nécessaire.
 
 Dans "final.tex" vous devrez modifier le titre qui apparaitra sur la page de
-garde.
-
-Le reste pourra (devra) être utilisé tel quel.
+garde et dans les pieds de page (footer).
