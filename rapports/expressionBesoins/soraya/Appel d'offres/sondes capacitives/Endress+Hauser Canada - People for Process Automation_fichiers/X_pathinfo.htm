@@ -1,0 +1,50 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=us-ascii">
+
+<!--  -->
+
+<style>
+	BODY {background-color:#CCCCCC;}
+	DIV {position:absolute;}
+	A {}
+	#path {left:-8; top:1; width:1; height:1;}
+	#pathTooLong {left:0; top:1; display:none; background-color:#CCCCCC; z-index:100;}
+	.infotext {font-weight:bold; font-family:Arial; font-size:11px; color:#666666;}
+	A {color:#666666;text-decoration:none;}
+	A.active {color:#0099FF;}
+</style>
+<script>
+	pathstring_delimiter = '&nbsp;<img src="/eh/sc/america/ca/fr/home.nsf/imgref/N_pathmarker.gif/$FILE/pathmarker.gif" width="8" height="8" hspace="2">';
+	pathstring_delimiter_a = '&nbsp;<img src="/eh/sc/america/ca/fr/home.nsf/imgref/N_pathmarker_a.gif/$FILE/pathmarker_a.gif" width="8" height="8" hspace="2">';
+	default_pathstring = pathstring_delimiter_a + '<a href="javascript:parent.startinit(1);" class="active">'+parent.strHome+'</a>';
+	
+	function set_pathstring(pathstring) {
+		if(pathstring == '') pathstring = default_pathstring;
+		pathstring = '<NOBR>&nbsp;'+pathstring+'</NOBR>';
+		if(document.all) document.all['path'].innerHTML = pathstring;
+		else if(document.getElementById) document.getElementById('path').innerHTML = pathstring;
+		else if(document.layers) with(document.layers['path'].document) {
+			open();
+			write('<SPAN CLASS="infotext">'+pathstring+'</SPAN>');
+			close();
+		}
+		fixPath();
+	}
+	function fixPath() {
+		if(document.getElementById) {
+			if(document.getElementById('path') && document.getElementById('path').offsetWidth > 603) {
+				document.getElementById('path').style.left = 590 - document.getElementById('path').offsetWidth;
+				document.getElementById('pathTooLong').style.display = 'block';	
+			}
+			else {
+				document.getElementById('path').style.left = -8;
+				document.getElementById('pathTooLong').style.display = 'none';	
+			}
+		}
+	}
+</script>
+
+</head><body>
+<div style="left: -8px;" id="path" class="infotext"><nobr>&nbsp;&nbsp;<img src="X_pathinfo_data/pathmarker.gif" width="8" height="8" hspace="2"><a href="javascript:parent.startinit(1);">Homepage</a>&nbsp;<img src="X_pathinfo_data/pathmarker.gif" width="8" height="8" hspace="2"><a href="javascript:parent.entryclick(0,147)">Instrumentation</a>&nbsp;<img src="X_pathinfo_data/pathmarker.gif" width="8" height="8" hspace="2"><a href="javascript:parent.entryclick(0,148)">Niveau</a>&nbsp;<img src="X_pathinfo_data/pathmarker.gif" width="8" height="8" hspace="2"><a href="javascript:parent.entryclick(0,279)">Unit&#233;s de contr&#244;le/R&#233;gulateurs de niveau</a>&nbsp;<img src="X_pathinfo_data/pathmarker_a.gif" width="8" height="8" hspace="2"><a class="active" href="javascript:parent.entryclick(0,291)">Nivotester - Capacitif<br>FMC420</a></nobr></div>
+<div style="display: none;" id="pathTooLong" class="infotext">...&nbsp;</div>
+</body></html>

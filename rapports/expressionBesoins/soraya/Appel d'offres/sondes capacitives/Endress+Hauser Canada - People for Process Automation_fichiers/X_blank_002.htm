@@ -1,0 +1,21 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=us-ascii">
+
+<!--  -->
+
+	<script>
+	var structureURL=location.href.split('externalStructure=')[1].split('&anchorID=')[0];
+	var anchorID = location.href.split('&anchorID=')[1].split('&loadDoc=')[0];
+	var loadDoc = location.href.split('&loadDoc=')[1];
+
+	if (structureURL && parent.productpath) document.write('<SCRIPT LANGUAGE="JavaScript" SRC="'+structureURL + 'navigation.js?ReadForm"><\/SCRIPT>');
+	</script><script language="JavaScript" src="X_blank_data_002/navigation.htm"></script>
+
+</head><body>
+
+<script>
+parent.externalStructures[structureURL] = true;
+parent.addExternalStructure(structureURL, anchorID, loadDoc);
+</script>
+
+</body></html>

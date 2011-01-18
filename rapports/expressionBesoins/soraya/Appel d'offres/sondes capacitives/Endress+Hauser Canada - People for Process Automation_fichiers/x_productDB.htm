@@ -1,0 +1,19 @@
+	var ContainerDomain='http://container.endress.com/ProductContainerGUI/?';
+	if(ContainerDomain.indexOf('/ProductContainerGUI')!=-1) ContainerDomain=ContainerDomain.split('/ProductContainerGUI')[0];
+	var productlist;
+	function do_addToNotepad(productroot) {
+		if(document.location.host.indexOf('.softwerk.')!=-1){
+		        productlist=window.open("http://endress-container.softwerk.de/ProductContainerGUI/jsp/productlist/productlist.jsp?root="+productroot,"popup","width=700,height=500,resizable=yes").focus();
+		}
+		else productlist=window.open(ContainerDomain+"/ProductContainerGUI/jsp/productlist/productlist.jsp?root="+productroot,"popup","width=700,height=500,resizable=yes").focus();
+		return false;
+	}
+	function do_showNotepad() {
+	//	return false;  // return wegen Fehler
+		if(document.location.host.indexOf('.softwerk.')!=-1){
+		        productlist=window.open("http://endress-container.softwerk.de/ProductContainerGUI/jsp/productlist/productlist.jsp","popup","width=700,height=500,resizable=yes").focus();
+		}
+		else productlist=window.open(ContainerDomain+"/ProductContainerGUI/jsp/productlist/productlist.jsp","popup","width=700,height=500,resizable=yes").focus();
+		return false;
+	}
+

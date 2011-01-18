@@ -1,0 +1,338 @@
+@import url(../guicontrol/theme_internet.css);
+
+body
+{ 
+	margin-left: 10px;
+	background-color: white;
+}
+
+.picturebutton, .picturebutton_over {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+.picturebuttonbig, .picturebuttonbig_over  {
+	margin-top: 25px;
+	margin-left: 25px;	
+	z-index: 1005;
+}
+
+.picturePopup {
+	border: 2px solid #CECECE;
+	background-color: white;
+}
+
+.productpicturebig {
+	margin-top: 25px;
+	margin-left: 25px;
+}
+
+H1 {
+	font-size: 17px;
+	line-height: 19px;
+	color: #FF0099;
+	font-weight: bold;
+}
+
+H2 {
+	font-size: 14px;
+	line-height: 15px;
+	color: #0099FF;
+	}
+
+H3 {
+	font-size: 11px;
+	line-height: 14px;
+	color: #000000;
+	margin-bottom: 2px;
+}
+
+H3.cyan {
+	color: #0099FF;
+	}
+
+H3.cyanbackground {
+	background-color: #0099FF;
+	color: #FFFFFF;
+	padding-left: 6px;
+}
+
+a, a:visited, a:active, a:hover {
+	text-decoration: none;
+	color: #666666;
+	font-weight: bold;
+}
+
+.box a, .box a:visited, .box a:active, .box a:hover {
+	font-weight: normal;
+}
+
+a.active {
+	color: #0099FF;
+}
+
+a.pathmarker {
+	padding-left: 10px;
+	background: url(../images/gui_control/pathmarker.gif) no-repeat center left;
+	line-height: 16px;
+}
+
+a.pathmarker_active, a.pathmarker:hover, a.pathmarker_active:active {
+	padding-left: 10px;
+	background: url(../images/gui_control/pathmarker_a.gif) no-repeat center left;
+	line-height: 16px;
+	color: #0099FF;
+}
+
+a.pathmarker_down {
+	padding-left: 10px;
+	background: url(../images/gui_control/twist_open_1n.gif) no-repeat center left;
+}
+
+a.pathmarker_down_active {
+	padding-left: 10px;
+	background: url(../images/gui_control/twist_open_1a.gif) no-repeat center left;
+	color: #0099FF;
+}
+
+
+
+a.dots, a.dots:visited, a.dots:hover {
+	padding-left: 10px;
+	background: url(../images/gui_control/twist_page_2n.gif) no-repeat top left;
+}
+
+a.dots:hover {
+	color:#0099FF;
+	background: url(../images/gui_control/twist_page_2a.gif) no-repeat top left;
+}
+
+/**********************************************************
+ Tabstrip
+***********************************************************/
+
+.euhTabStrip {
+	margin-top: 2px;
+	margin-bottom: -1px;
+}
+
+.euhTabPane {
+	border-style:solid;
+	border-width: 1px 0px 0px 0px;
+	border-color: #666666;
+    background-color: #ffffff;
+    width: 608px;
+    margin-top: 0px;
+    min-height:250px;
+    padding-top: 5px;
+}
+
+/* and specially for the ie, because min-height isn't supported */
+* html .euhTabPane { 
+	height: 250px; 
+}
+
+.euhTabSelected {
+	background-image:url(../images/gui_control/euhtab/tabSelected.gif);
+	background-repeat: repeat-x;
+	cursor: pointer;
+	height: 31px;
+}
+
+.euhTabselected td {
+	color: #0099FF;
+	font-weight: bold;
+}
+
+.euhTabUnselected {
+	background-image:url(../images/gui_control/euhtab/tabUnselected.gif);
+	background-repeat: repeat-x;
+	cursor: pointer;
+	height: 31px;	
+}
+
+.euhTabUnselected td {
+	color: #666666;
+	font-weight: bold;
+}
+
+.euhTabDisabled {
+	background-image:url(../images/gui_control/euhtab/tabUnselected.gif);
+	background-repeat: repeat-x;
+	color : white;
+	height: 31px;	
+}
+
+.euhTabDisabled td {
+	font-weight: bold;
+	color : #d8d8d8;
+}
+
+.euhTabFirstUnselected {
+	background-image:url(../images/gui_control/euhtab/tabFirstUnselected.gif);
+	background-repeat: no-repeat;
+	width : 14px;
+	height: 31px;
+}
+
+.euhTabFirstSelected {
+	background-image:url(../images/gui_control/euhtab/tabFirstSelected.gif);
+	background-repeat: no-repeat;
+	width : 14px;
+	height: 31px;	
+}
+
+.euhTabLastUnselected {
+	background-image:url(../images/gui_control/euhtab/tabLastUnselected.gif); 
+	background-repeat: repeat-x;
+	width : 14px;
+	height: 31px;	
+}
+
+.euhTabLastSelected {
+	background-image:url(../images/gui_control/euhtab/tabLastSelected.gif); 
+	background-repeat: repeat-x;
+	width : 14px;
+	height: 31px;	
+}
+
+.euhTabLeftOfSelected {
+	background-image:url(../images/gui_control/euhtab/tabLeftOfSelected.gif);
+	background-repeat: no-repeat;
+	width : 27px;
+	height: 31px;	
+}
+
+.euhTabRightOfSelected {
+	background-image:url(../images/gui_control/euhtab/tabRightOfSelected.gif);
+	background-repeat: no-repeat;
+	width : 27px;
+	height: 31px;	
+}
+
+.euhTabBetweenUnselected {
+	background-image:url(../images/gui_control/euhtab/tabBetweenUnselected.gif);
+	background-repeat: no-repeat;
+	width : 27px;
+	height: 31px;	
+}
+
+/*****************************************************************************
+	Table
+******************************************************************************/
+
+.docheader {
+	background-color: #CCCCCC;
+	font-weight: bold;
+	color: #000000;
+}
+
+.docsubheader {
+	background-color: #0099FF;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.doccell {
+	padding-left: 3px;
+}
+
+.greyrow {
+	background-color: #EEEEEE;
+}
+
+.whiterow {
+	background-color: #FFFFFF;
+}
+
+.sfttablecell {
+	padding-left: 3px;
+	line-height: 14px;
+	font-size: 11px;
+	border-color: #666666;
+	border-style: solid;
+
+}
+
+.sfttableheadcell {
+	padding-left: 3px;
+	padding-right: 5px;	
+	line-height: 14px;
+	font-size: 11px;
+	font-weight: bold;
+	background-color: #CCCCCC;
+	border-color: #666666;
+	border-style: solid;
+}
+
+.box {
+	background-color: #99CCFF;
+	margin-bottom: 16px;
+	padding-bottom: 2px;
+	}
+.box .header {
+	background-color: #0099FF;
+	font-size: 11px;
+	line-height: 14px;
+	color: #FFFFFF;
+	font-weight:bold;
+	padding-left:6px;
+	}
+	
+.box .content {
+	padding-left:6px;
+}
+
+.box .content a.dots:hover {
+	color:#666666;
+	background: url(../images/gui_control/twist_page_2n.gif) no-repeat top left;
+}
+	
+.tiTable{
+	width: auto;
+	max-width: 560px
+}
+.tiTableCell{
+	margin: 1px;
+	padding-left: 3px;
+	padding-right: 5px;	
+	line-height: 14px;
+	font-size: 11px;
+	vertical-align: top;
+	background-color: #CCCCCC;
+}
+
+.plTable{
+	width: 640px;
+	border-collapse: collapse;
+}
+.plTableHeadCell{
+	margin: 0px;
+	border: 1px solid;
+	padding: 3px;
+	line-height: 14px;
+	font-size: 11px;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+.plTableCell{
+	margin: 0px;
+	border: 1px solid;
+	padding: 3px;
+	line-height: 14px;
+	font-size: 11px;
+	vertical-align: top;
+}
+
+p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.hassownsuccessors {
+	font-style: italic;
+	color: lightgrey !important;	
+}
